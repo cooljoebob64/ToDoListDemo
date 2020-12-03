@@ -1,0 +1,12 @@
+.done {
+	font-style: italic;
+	text-decoration: line-through;
+}
+
+.notDone {
+	font-style: normal;
+}
+
+h1{
+	color:green;
+}
