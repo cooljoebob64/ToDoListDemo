@@ -41,13 +41,17 @@
 					console.log("Timeout expired!");
 				},3000);
 
-				if(this.classList.contains("notDone")){
-					this.classList.remove("notDone");
-					this.classList.add("done");
-				} else {
-					this.classList.remove("done");
-					this.classList.add("notDone");
-				};
+
+				(this.classList.contains("notDone") 
+				? 
+					(this.classList.remove("notDone"),
+					this.classList.add("done"))
+				:
+					(this.classList.remove("done"),
+					this.classList.add("notDone"))
+				)
+
+
 			});
 
 
