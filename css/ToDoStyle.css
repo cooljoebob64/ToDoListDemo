@@ -5,7 +5,7 @@ h1{
 .done {
 	font-style: italic;
 	text-decoration: line-through;
-	opacity: .50;
+	opacity: .75;
 }
 
 .notDone {
@@ -13,8 +13,8 @@ h1{
 }
 
 @keyframes fadeOut{
-	0%{opacity:.5;}
-	50%{opacity: .25;}
+	0%{opacity:.75;}
+	10%{opacity: .50;}
 	100%{opacity: 0;}
 }
 
