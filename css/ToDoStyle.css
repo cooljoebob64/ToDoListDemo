@@ -5,8 +5,20 @@ h1{
 .done {
 	font-style: italic;
 	text-decoration: line-through;
+	opacity: .50;
 }
 
 .notDone {
 	font-style: normal;
+}
+
+@keyframes fadeOut{
+	0%{opacity:.5;}
+	50%{opacity: .25;}
+	100%{opacity: 0;}
+}
+
+.fading{
+	animation-name: fadeOut;
+	animation-duration: 2s;
 }
