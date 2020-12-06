@@ -46,8 +46,7 @@
 					(
 					this.classList.remove("notDone"),
 					this.classList.add("done"),
-					console.log(" is about to be deleted!")
-					,
+					console.log(" is about to be deleted!"),
 					this.classList.add("fading")
 					)
 				:
@@ -59,7 +58,7 @@
 				)
 			});
 
-			if(inputField.value!=""){
+				if(inputField.value!=""){
 				newItem.innerHTML = inputField.value;
 				toDoList.append(newItem);
 				inputField.value = "";
