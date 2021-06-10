@@ -2,68 +2,19 @@
 <html>
 <head>
 	<title>To Do List</title>
-	<link rel="stylesheet" type="text/css" href="css/ToDoStyle.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/ToDoStyle.css">
+	
+	<script src="assets/js/toDoList.js" async defer></script>
 </head>
 <body>
 
 	<h1>To Do List!</h1>
 
-	<!-- <form name="toDoInput"> -->
-		<label name="toDoInput">New To-Do Item: </label><input name="toDoInput" type="text" id="inputField"></input><button id=addButton onclick="addItem();">Add Item</button>
-	<!-- </form> -->
+	<label name="toDoInput">New To-Do Item: </label>
+	<input name="toDoInput" type="text" id="inputField"></input>
+	<button id=addButton onclick="addItem();">Add Item</button>
 
-	<ul id="toDoList">
-	</ul>
-
-	<script type="text/javascript">
-		function addItem(){
-			let addButton = document.querySelector("#addButton");
-			let toDoList = document.querySelector("#toDoList");
-			let inputField = document.querySelector("#inputField");
-
-			let newItem = document.createElement('li');
-			newItem.classList.add("notDone");
-
-			newItem.addEventListener('click',function(){
-				console.log(this," just got clicked!");
-				
-
-				setTimeout(function(){
-						// console.log("Timeout expired!");
-						// console.log(this)
-						
-						if(this.classList.contains("done")){
-							console.log(this)
-							console.log("was deleted!!");
-							this.remove();
-						} else console.log("Deletion cancelled for ", this)
-					}.bind(this),1000
-				);
-
-				(this.classList.contains("notDone") 
-				? 
-					(
-					this.classList.remove("notDone"),
-					this.classList.add("done"),
-					console.log(" is about to be deleted!"),
-					this.classList.add("fading")
-					)
-				:
-					(
-					this.classList.remove("done"),
-					this.classList.add("notDone"),
-					this.classList.remove("fading")
-					)
-				)
-			});
-
-				if(inputField.value!=""){
-				newItem.innerHTML = inputField.value;
-				toDoList.append(newItem);
-				inputField.value = "";
-			} else{console.log("No input in text field!");};
-		};
-	</script>
-
+	<ul id="toDoList"></ul>
 </body>
 </html>
